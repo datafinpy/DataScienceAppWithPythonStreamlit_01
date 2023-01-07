@@ -13,17 +13,15 @@ These are the stocks closing price and volume of Google!
 
 """)
 
-def main():
-  # Define the ticker symbol
-  ticker_symbol = 'GOOGL'
-  # get data on this ticker
-  ticker_data = yf.Ticker(ticker_symbol)
-  # Get the historical prices for this symbol
-  ticker_df = ticker_data.history(period='1d', start='2010-05-31', end='2022-05-31')
+# Define the ticker symbol
+ticker_symbol = 'GOOGL'
+# get data on this ticker
+ticker_data = yf.Ticker(ticker_symbol)
+# Get the historical prices for this symbol
+ticker_df = ticker_data.history(period='1d', start='2010-05-31', end='2022-05-31')
 
-  st.write("""## Closing Price""")
-  st.line_chart(ticker_df.Close)
-  st.write("""## Volume""")
-  st.line_chart(ticker_df.Volume)
+st.write("""## Closing Price""")
+st.line_chart(ticker_df.Close)
+st.write("""## Volume""")
+st.line_chart(ticker_df.Volume)
 
-  main
