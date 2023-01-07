@@ -3,7 +3,7 @@
 # Also, markdown reference https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 import streamlit as st
-# import yfinance as yf
+import yfinance as yf
 import pandas as pd
 
 st.write("""
@@ -19,7 +19,7 @@ def tmp():
   # get data on this ticker
   ticker_data = yf.Ticker(ticker_symbol)
   # Get the historical prices for this symbol
-  ticker_df = ticker_data.history(perio='1d', start='2010-05-31', end='2022-05-31')
+  ticker_df = ticker_data.history(period='1d', start='2010-05-31', end='2022-05-31')
 
   st.write("""## Closing Price""")
   st.line_chart(ticker_df.Close)
