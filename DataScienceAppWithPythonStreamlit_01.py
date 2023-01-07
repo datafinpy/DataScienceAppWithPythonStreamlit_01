@@ -3,8 +3,8 @@
 # Also, markdown reference https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 import streamlit as st
-import yfinance as yf
-import pandas as pd
+# import yfinance as yf
+# import pandas as pd
 
 st.write("""
 # Simple Stock Price App
