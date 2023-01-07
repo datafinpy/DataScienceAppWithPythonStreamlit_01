@@ -13,7 +13,7 @@ These are the stocks closing price and volume of Google!
 
 """)
 
-def tmp():
+def main():
   # Define the ticker symbol
   ticker_symbol = 'GOOGL'
   # get data on this ticker
@@ -25,3 +25,5 @@ def tmp():
   st.line_chart(ticker_df.Close)
   st.write("""## Volume""")
   st.line_chart(ticker_df.Volume)
+
+  main
